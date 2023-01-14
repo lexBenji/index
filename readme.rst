@@ -11,8 +11,12 @@ Usage
 
 .. code:: index
 
+ fn hello(char *name) begin
+ print "Hello %s\n",name endl
+ end
+
  void main() begin
- print "hello world\n" endl;
+ hello("World")
  end
 
 the file can end with ``.ind`` or the name only.
