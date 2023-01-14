@@ -15,14 +15,20 @@ with open(arg[1],'r') as rf:
             for w in i.split():
                 if w == 'void':
                     wf.write('int ')
+                elif w == 'fn':
+                    wf.write('void ')
                 elif w == 'begin':
                     wf.write('{')
+                elif w == 'cmt':
+                    wf.write('/* ')
                 elif w == 'end':
                     wf.write('}\n')
                 elif w == 'print':
                     wf.write('printf(')
-                elif w == 'endl;':
+                elif w == 'endl;' or w == 'endl':
                     wf.write(');')
+                elif w == 'endc':
+                    wf.write('*/')
                 else:
                     wf.write(w+' ')
             wf.write('\n')

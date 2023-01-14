@@ -1,5 +1,11 @@
 #include <stdio.h>
+void hello(char *name) {
+printf("Hello %s\n", name );
+}
+
+
 int main() {
-printf("hello world\n" );
+/* comment */
+hello("World"); 
 }
 
