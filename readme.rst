@@ -1,7 +1,7 @@
 Install
 =======
 
-.. code::sh
+.. code:: sh
 
  git clone https://github.com/lexBenji/index
  cd index
@@ -9,8 +9,10 @@ Install
 Usage
 =====
 
-.. code::sh
+.. code:: index
 
- cat hello.ind
+ void main() begin
+ print "hello world\n" endl;
+ end
 
 the file can end with ``.ind`` or the name only.
