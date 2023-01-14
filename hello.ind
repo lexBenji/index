@@ -1,0 +1,3 @@
+void main() begin
+print "hello world\n" endl;
+end

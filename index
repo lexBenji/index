@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+from sys import argv as arg
+
+print(arg)
+if not arg[1].endswith('.ind'):
+    arg[1] = arg[1]+'.ind'
+print(arg)
+
+with open(arg[1],'r') as rf:
+    with open('index.c','w') as wf:
+        rf = rf.readlines()
+        wf.write('#include <stdio.h>\n')
+        for i in rf:
+            for w in i.split():
+                if w == 'void':
+                    wf.write('int ')
+                elif w == 'begin':
+                    wf.write('{')
+                elif w == 'end':
+                    wf.write('}\n')
+                elif w == 'print':
+                    wf.write('printf(')
+                elif w == 'endl;':
+                    wf.write(');')
+                else:
+                    wf.write(w+' ')
+            wf.write('\n')
